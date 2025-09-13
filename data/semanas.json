@@ -52,7 +52,7 @@
 
       {"local": "Yankees", "visitante": "Royals", "resultado": "12-2", "estado": "JUGADO"},
       {"local": "Yankees", "visitante": "Royals", "resultado": "10-0", "estado": "JUGADO"},
-      {"local": "Yankees", "visitante": "Royals", "resultado": "", "estado": "Pendiente"},
+      {"local": "Yankees", "visitante": "Royals", "resultado": "4-7", "estado": "Pendiente"},
 
       {"local": "Mets", "visitante": "Phillies", "resultado": "3-5", "estado": "JUGADO"},
       {"local": "Mets", "visitante": "Phillies", "resultado": "", "estado": "Pendiente"},
