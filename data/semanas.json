@@ -19,7 +19,7 @@
       {"local": "Padres", "visitante": "Detroit", "resultado": "", "estado": "Pendiente"},
 
       {"local": "Toronto", "visitante": "Cubs", "resultado": "0-3", "estado": "JUGADO"},
-      {"local": "Toronto", "visitante": "Cubs", "resultado": "", "estado": "Pendiente"},
+      {"local": "Toronto", "visitante": "Cubs", "resultado": "11-7", "estado": "JUGADO"},
       {"local": "Toronto", "visitante": "Cubs", "resultado": "", "estado": "Pendiente"},
 
       {"local": "Astros", "visitante": "Yankees", "resultado": "3-14", "estado": "JUGADO"},
@@ -51,10 +51,10 @@
       {"local": "Cubs", "visitante": "Boston", "resultado": "", "estado": "Pendiente"},
 
       {"local": "Yankees", "visitante": "Royals", "resultado": "12-2", "estado": "JUGADO"},
-      {"local": "Yankees", "visitante": "Royals", "resultado": "", "estado": "Pendiente"},
+      {"local": "Yankees", "visitante": "Royals", "resultado": "10-0", "estado": "JUGADO"},
       {"local": "Yankees", "visitante": "Royals", "resultado": "", "estado": "Pendiente"},
 
-      {"local": "Mets", "visitante": "Phillies", "resultado": "", "estado": "Pendiente"},
+      {"local": "Mets", "visitante": "Phillies", "resultado": "3-5", "estado": "JUGADO"},
       {"local": "Mets", "visitante": "Phillies", "resultado": "", "estado": "Pendiente"},
       {"local": "Mets", "visitante": "Phillies", "resultado": "", "estado": "Pendiente"}
     ]
