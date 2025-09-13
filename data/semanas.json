@@ -26,7 +26,7 @@ Y sw{
       {"local": "Astros", "visitante": "Yankees", "resultado": "", "estado": "Pendiente"},
       {"local": "Astros", "visitante": "Yankees", "resultado": "", "estado": "Pendiente"},
 
-      {"local": "Royals", "visitante": "Mets", "resultado": "3-2", "estado": "Pendiente"},
+      {"local": "Royals", "visitante": "Mets", "resultado": "3-2", "estado": "JUGADO"},
       {"local": "Royals", "visitante": "Mets", "resultado": "", "estado": "Pendiente"},
       {"local": "Royals", "visitante": "Mets", "resultado": "", "estado": "Pendiente"},
 
@@ -55,7 +55,7 @@ Y sw{
       {"local": "Yankees", "visitante": "Royals", "resultado": "4-7", "estado": "JUGADO"},
 
       {"local": "Mets", "visitante": "Phillies", "resultado": "3-5", "estado": "JUGADO"},
-      {"local": "Mets", "visitante": "Phillies", "resultado": "14-8", "estado": "Pendiente"},
+      {"local": "Mets", "visitante": "Phillies", "resultado": "14-8", "estado": "JUGADO"},
       {"local": "Mets", "visitante": "Phillies", "resultado": "", "estado": "Pendiente"}
     ]
   }
