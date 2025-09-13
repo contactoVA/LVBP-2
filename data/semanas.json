@@ -6,7 +6,7 @@
       {"local": "Boston", "visitante": "Astros", "resultado": "5-7", "estado": "JUGADO"},
       {"local": "Boston", "visitante": "Astros", "resultado": "9-6", "estado": "JUGADO"},
 
-      {"local": "Giants", "visitante": "Dodgers", "resultado": "", "estado": "Pendiente"},
+      {"local": "Giants", "visitante": "Dodgers", "resultado": "1-6", "estado": "JUGADO"},
       {"local": "Giants", "visitante": "Dodgers", "resultado": "", "estado": "Pendiente"},
       {"local": "Giants", "visitante": "Dodgers", "resultado": "", "estado": "Pendiente"},
 
