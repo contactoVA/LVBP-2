@@ -48,7 +48,7 @@
 
       {"local": "Cubs", "visitante": "Boston", "resultado": "2-6", "estado": "JUGADO"},
       {"local": "Cubs", "visitante": "Boston", "resultado": "2-11", "estado": "JUGADO"},
-      {"local": "Cubs", "visitante": "Boston", "resultado": "", "estado": "Pendiente"},
+      {"local": "Cubs", "visitante": "Boston", "resultado": "5-6", "estado": "JUGADO"},
 
       {"local": "Yankees", "visitante": "Royals", "resultado": "12-2", "estado": "JUGADO"},
       {"local": "Yankees", "visitante": "Royals", "resultado": "10-0", "estado": "JUGADO"},
