@@ -84,9 +84,13 @@ def api_full():
                 # Actualizar semana actual con marcadores "JUGADO"
                 semana_actual = str(semanas.get("semana_actual"))
                 if semana_actual in semanas.get("semanas", {}):
+                    used_games = []
+
                     for juego in semanas["semanas"][semana_actual]:
                         if juego.get("estado") == "Pendiente":
                             for g in parsed_games:
+                                if g in used_games:
+                                    continue  # este resultado ya fue usado
                                 if (
                                     g["home"] == juego["local"]
                                     and g["away"] == juego["visitante"]
@@ -95,6 +99,7 @@ def api_full():
                                 ):
                                     juego["estado"] = "JUGADO"
                                     juego["resultado"] = f"{g['home_score']}-{g['away_score']}"
+                                    used_games.append(g)
                                     break
 
                 data["semana_actual"] = semanas.get("semana_actual")
