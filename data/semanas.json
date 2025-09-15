@@ -29,50 +29,50 @@
       {
         "local": "Giants",
         "visitante": "Dodgers",
-        "resultado": "0-0",
+        "resultado": "",
         "estado": "SIMULADO"
       },
       {
         "local": "Giants",
         "visitante": "Dodgers",
-        "resultado": "0-0",
+        "resultado": "",
         "estado": "SIMULADO"
       },
       {
         "local": "Cardinals",
         "visitante": "Diamondbacks",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Cardinals",
         "visitante": "Diamondbacks",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Cardinals",
         "visitante": "Diamondbacks",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Padres",
         "visitante": "Tigers",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Padres",
         "visitante": "Tigers",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Padres",
         "visitante": "Tigers",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Blue Jays",
@@ -90,7 +90,7 @@
         "local": "Blue Jays",
         "visitante": "Cubs",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Astros",
@@ -102,31 +102,31 @@
         "local": "Astros",
         "visitante": "Yankees",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Astros",
         "visitante": "Yankees",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Royals",
         "visitante": "Mets",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Royals",
         "visitante": "Mets",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Royals",
         "visitante": "Mets",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Phillies",
@@ -138,49 +138,49 @@
         "local": "Phillies",
         "visitante": "Giants",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Phillies",
         "visitante": "Giants",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Dodgers",
         "visitante": "Cardinals",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Dodgers",
         "visitante": "Cardinals",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Dodgers",
         "visitante": "Cardinals",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Diamondbacks",
         "visitante": "Padres",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Diamondbacks",
         "visitante": "Padres",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": ""SIMULADO"
       },
       {
         "local": "Diamondbacks",
         "visitante": "Padres",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Tigers",
@@ -246,13 +246,13 @@
         "local": "Mets",
         "visitante": "Phillies",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       },
       {
         "local": "Mets",
         "visitante": "Phillies",
         "resultado": "",
-        "estado": "Pendiente"
+        "estado": "SIMULADO"
       }
     ],
     "3": [
