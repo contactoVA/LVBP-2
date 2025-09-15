@@ -1,165 +1,119 @@
-:root {
-  --bg: #0d1117;
-  --fg: #e6edf3;
-  --accent: #58a6ff;
-  --border: #30363d;
-  --card: #161b22;
+/* ==========================
+   Estilos generales
+========================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+h1, h2, h3 {
+  color: #66fcf1;
 }
 
 .container {
-  max-width: 900px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 16px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 28px;
-}
-
-.subtitle {
-  text-align: center;
-  margin-top: 4px;
-  margin-bottom: 20px;
-  color: #9aa5b1;
-}
-
-/* Barra progreso */
-#progress-container {
-  width: 100%;
-  background: var(--card);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 6px;
-}
-
-#progress-bar {
-  height: 22px;
-  background: var(--accent);
-  text-align: center;
-  line-height: 22px;
-  color: #fff;
-  width: 0%;
-  font-size: 13px;
-  transition: width 0.2s;
-}
-
-/* Tabla */
-.table-wrapper {
-  overflow-x: auto;
-  background: var(--card);
-  padding: 8px;
-  border-radius: 8px;
+  padding: 20px;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  margin-top: 20px;
 }
 
-thead {
-  background: #1f2635;
-}
-
-th, td {
+table th, table td {
+  border: 1px solid #45a29e;
   padding: 8px;
   text-align: center;
-  border-bottom: 1px solid var(--border);
 }
 
-tr:hover {
-  background: #1e2738;
+table th {
+  background-color: #1f2833;
+  color: #66fcf1;
 }
 
-.team {
+table tr:nth-child(even) {
+  background-color: #1f2833;
+}
+
+table tr:nth-child(odd) {
+  background-color: #0b0c10;
+}
+
+/* ==========================
+   Juegos por semana
+========================== */
+details {
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #1f2833;
+  border-radius: 5px;
+}
+
+details[open] {
+  background-color: #0b0c10;
+  border: 1px solid #66fcf1;
+}
+
+details summary {
+  cursor: pointer;
   font-weight: bold;
-  font-size: 15px;   /* equipo ligeramente más grande */
-  color: #f4d03f;
-}
-.user {
-  font-size: 13px;   /* jugador más pequeño */
-  color: #a6e3ff;
-}
-
-/* Juegos de hoy */
-#games-today {
-  margin-top: 22px;
-  padding: 16px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-}
-
-#games-today h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #cfe2ff;
-}
-
-#games-list {
+  padding: 5px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  color: inherit; /* Mantiene el color original del texto */
 }
 
-#games-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid #1c2549;
+/* Solo triángulos en amarillo */
+details summary::-webkit-details-marker {
+  color: yellow; /* Chrome/Safari */
+}
+
+details summary::marker {
+  color: yellow; /* Firefox */
+}
+
+/* ==========================
+   Filtros
+========================== */
+select {
+  background-color: #1f2833;
+  color: #66fcf1;
+  border: 1px solid #45a29e;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+select option {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+
+/* ==========================
+   Otros elementos
+========================== */
+button {
+  background-color: #45a29e;
+  color: #0b0c10;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #66fcf1;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #c5c6c7;
   font-size: 14px;
 }
-
-#games-list li:last-child {
-  border-bottom: none;
-}
-
-.game-item {
-  color: #e7ecff;
-  font-family: monospace;
-}
-
-/* Utilidad */
-.hidden { display: none; }
-
-/* Responsive */
-@media (max-width: 600px) {
-  th, td {
-    font-size: 12px;
-    padding: 6px;
-  }
-  .team {
-    font-size: 14px;
-  }
-  .user {
-    font-size: 11px;
-  }
-}
-
-
-
-/* ===== Series & Weekly (texto) ===== */
-.titulo-serie{
-  margin-top:12px;
-  font-size:16px;
-  font-weight:700;
-  color:#cfe5ff;
-  border-bottom:1px solid rgba(255,255,255,.18);
-  padding-bottom:4px;
-}
-.serie-lista{list-style:none;margin:6px 0 10px 12px;padding:0}
-.juego-linea{margin:4px 0;font-size:14px}
-
-/* estados */
-.estado-pendiente{color:#9fb3d1;font-style:italic}
-.estado-jugado{color:#a8ffc1;font-weight:700}
-.estado-simulado{color:#ffb3b8;font-weight:700;text-decoration:underline}
-
