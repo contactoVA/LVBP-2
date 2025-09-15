@@ -263,8 +263,44 @@
         "estado": "Pendiente"
       },
       {
+        "local": "Red Sox",
+        "visitante": "Dodgers",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Red Sox",
+        "visitante": "Dodgers",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
         "local": "Yankees",
         "visitante": "Cardinals",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Yankees",
+        "visitante": "Cardinals",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Yankees",
+        "visitante": "Cardinals",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Giants",
+        "visitante": "Astros",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Giants",
+        "visitante": "Astros",
         "resultado": "",
         "estado": "Pendiente"
       },
@@ -281,8 +317,44 @@
         "estado": "Pendiente"
       },
       {
+        "local": "Mets",
+        "visitante": "Diamondbacks",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Mets",
+        "visitante": "Diamondbacks",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
         "local": "Padres",
         "visitante": "Phillies",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Padres",
+        "visitante": "Phillies",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Padres",
+        "visitante": "Phillies",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Blue Jays",
+        "visitante": "Royals",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Blue Jays",
+        "visitante": "Royals",
         "resultado": "",
         "estado": "Pendiente"
       },
@@ -299,8 +371,44 @@
         "estado": "Pendiente"
       },
       {
+        "local": "Cubs",
+        "visitante": "Tigers",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Cubs",
+        "visitante": "Tigers",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
         "local": "Dodgers",
         "visitante": "Yankees",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Dodgers",
+        "visitante": "Yankees",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Dodgers",
+        "visitante": "Yankees",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Cardinals",
+        "visitante": "Red Sox",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Cardinals",
+        "visitante": "Red Sox",
         "resultado": "",
         "estado": "Pendiente"
       },
@@ -317,6 +425,30 @@
         "estado": "Pendiente"
       },
       {
+        "local": "Astros",
+        "visitante": "Mets",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Astros",
+        "visitante": "Mets",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Diamondbacks",
+        "visitante": "Giants",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Diamondbacks",
+        "visitante": "Giants",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
         "local": "Diamondbacks",
         "visitante": "Giants",
         "resultado": "",
@@ -329,8 +461,44 @@
         "estado": "Pendiente"
       },
       {
+        "local": "Phillies",
+        "visitante": "Blue Jays",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Phillies",
+        "visitante": "Blue Jays",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
         "local": "Royals",
         "visitante": "Cubs",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Royals",
+        "visitante": "Cubs",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Royals",
+        "visitante": "Cubs",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Tigers",
+        "visitante": "Padres",
+        "resultado": "",
+        "estado": "Pendiente"
+      },
+      {
+        "local": "Tigers",
+        "visitante": "Padres",
         "resultado": "",
         "estado": "Pendiente"
       },
