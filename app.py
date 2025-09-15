@@ -8,16 +8,13 @@ from datetime import datetime
 app = Flask(__name__)
 CACHE_FILE = "standings_cache.json"
 
-
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
-
 
 @app.route("/api/full")
 def api_full():
@@ -81,16 +78,15 @@ def api_full():
                             }
                         )
 
-                # Actualizar semana actual con marcadores "JUGADO"
+                # === Actualizar semana actual con marcadores "JUGADO" ===
                 semana_actual = str(semanas.get("semana_actual"))
                 if semana_actual in semanas.get("semanas", {}):
                     used_games = []
-
                     for juego in semanas["semanas"][semana_actual]:
                         if juego.get("estado") == "Pendiente":
                             for g in parsed_games:
                                 if g in used_games:
-                                    continue  # este resultado ya fue usado
+                                    continue
                                 if (
                                     g["home"] == juego["local"]
                                     and g["away"] == juego["visitante"]
@@ -102,6 +98,26 @@ def api_full():
                                     used_games.append(g)
                                     break
 
+                # === SOLO DESPUÉS aplicar overrides ===
+                # ###MARCA_OVERRIDES###
+                try:
+                    overrides_path = os.path.join(data_dir, "manual_overrides.json")
+                    if os.path.exists(overrides_path):
+                        overrides = load_json(overrides_path)
+                        for key, val in overrides.items():
+                            for juego in semanas["semanas"].get(semana_actual, []):
+                                if (
+                                    juego.get("local") == val.get("local")
+                                    and juego.get("visitante") == val.get("visitante")
+                                ):
+                                    if "resultado" in val:
+                                        juego["resultado"] = val["resultado"]
+                                    if "estado" in val:
+                                        juego["estado"] = val["estado"]
+                except Exception as e:
+                    data["overrides_error"] = str(e)
+
+                # Agregar semanas al payload
                 data["semana_actual"] = semanas.get("semana_actual")
                 data["semanas"] = semanas.get("semanas")
 
@@ -117,7 +133,6 @@ def api_full():
         return jsonify(data)
     except Exception as e:
         return jsonify({"error": f"Failed to read cached data: {e}"}), 500
-
 
 if __name__ == "__main__":
     app.run(debug=True)
