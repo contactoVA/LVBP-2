@@ -69,7 +69,7 @@ API = "https://mlb25.theshow.com/apis/game_history.json"
 PLATFORM = "psn"
 MODE = "LEAGUE"
 SINCE = datetime(2025, 9, 15)
-PAGES = (1, 2)   # <-- SOLO p1 y p2, como validaste
+PAGES = (1, 2, 3, 4, 5, 6, 7)   # <-- SOLO p1 y p2, como validaste
 TIMEOUT = 20
 RETRIES = 2
 
@@ -407,89 +407,92 @@ def compute_rows():
 # -------------------------------
 def games_played_today_scl():
     """
-    Lista juegos del DÍA (America/Santiago) en formato legible.
-    Filtros:
-      - Modo LEAGUE
-      - Fecha mínima SINCE
-      - Ambos jugadores deben ser de la liga (o CPU + miembro)
-      - Usuario debe jugar con SU equipo asignado en LEAGUE_ORDER
-      - Deduplicación por id y clave canónica
+    Lista juegos del DÍA (America/Santiago) en formato:
+      'Yankees 1 - Brewers 2  - 30-08-2025 - 3:28 pm (hora Chile)'
+    Mejoras:
+      - Deduplicación por id y también por (equipos, runs, pitcher_info).
+      - Si la fecha viene sin tz, se asume UTC y se convierte a America/Santiago.
+      - Se requiere que AMBOS participantes pertenezcan a la liga.
     """
     tz_scl = ZoneInfo("America/Santiago")
     tz_utc = ZoneInfo("UTC")
     today_local = datetime.now(tz_scl).date()
 
-    # Mapear usuario → equipo esperado
-    USER_TO_TEAM = {u.lower(): t.lower() for u, t in LEAGUE_ORDER}
-
+    # Traer páginas p1 y p2 de todos los usuarios de la liga
     all_pages = []
     for username_exact, _team in LEAGUE_ORDER:
         for p in PAGES:
             all_pages += fetch_page(username_exact, p)
 
+    # Deduplicadores
     seen_ids = set()
-    seen_keys = set()
+    seen_keys = set()  # (home, away, hr, ar, pitcher_info)
     items = []
 
     for g in dedup_by_id(all_pages):
-        # Validar modo de juego
         if (g.get("game_mode") or "").strip().upper() != MODE:
             continue
 
-        # Fecha mínima + conversión a hora Chile
         d = parse_date(g.get("display_date", ""))
         if not d:
             continue
+
+        # Asumir UTC si es naive, luego convertir a SCL
         if d.tzinfo is None:
             d = d.replace(tzinfo=tz_utc)
         d_local = d.astimezone(tz_scl)
 
         if d_local.date() != today_local:
             continue
-        if d_local < SINCE:
-            continue
 
-        # Filtro de jugadores
+        # Ambos jugadores deben pertenecer a la liga
         home_name_raw = (g.get("home_name") or "")
         away_name_raw = (g.get("away_name") or "")
         h_norm = normalize_user_for_compare(home_name_raw)
         a_norm = normalize_user_for_compare(away_name_raw)
-        h_mem = h_norm in LEAGUE_USERS_NORM
-        a_mem = a_norm in LEAGUE_USERS_NORM
-        if not ((h_mem and a_mem) or (is_cpu(home_name_raw) and a_mem) or (is_cpu(away_name_raw) and h_mem)):
+        if not (h_norm in LEAGUE_USERS_NORM and a_norm in LEAGUE_USERS_NORM):
             continue
 
-        # Nuevo filtro: validar que cada usuario esté usando SU equipo asignado
-        home_team = (g.get("home_full_name") or "").strip().lower()
-        away_team = (g.get("away_full_name") or "").strip().lower()
-        if h_norm in USER_TO_TEAM and USER_TO_TEAM[h_norm] != home_team:
-            continue
-        if a_norm in USER_TO_TEAM and USER_TO_TEAM[a_norm] != away_team:
-            continue
-
-        # Deduplicación
+        # Dedup por id
         gid = str(g.get("id") or "")
         if gid and gid in seen_ids:
             continue
 
+        home = (g.get("home_full_name") or "").strip()
+        away = (g.get("away_full_name") or "").strip()
         hr = str(g.get("home_runs") or "0")
         ar = str(g.get("away_runs") or "0")
         pitcher_info = (g.get("display_pitcher_info") or "").strip()
 
-        canon_key = (home_team, away_team, hr, ar, pitcher_info)
+        # Clave canónica más robusta
+        canon_key = (home, away, hr, ar, pitcher_info)
         if canon_key in seen_keys:
             continue
 
+        # Marcar vistos
         if gid:
             seen_ids.add(gid)
         seen_keys.add(canon_key)
 
+        # Formato de salida
         try:
             fecha_hora = d_local.strftime("%d-%m-%Y - %-I:%M %p").lower()
         except Exception:
             fecha_hora = d_local.strftime("%d-%m-%Y - %#I:%M %p").lower()
 
-        items.append((d_local, f"{g.get('home_full_name')} {hr} - {g.get('away_full_name')} {ar}  - {fecha_hora} (hora Chile)"))
+        items.append((d_local, f"{home} {hr} - {away} {ar}  - {fecha_hora} (hora Chile)"))
 
     items.sort(key=lambda x: x[0])
     return [s for _, s in items]
+
+
+# ====== FIN DEL BLOQUE ======
+
+
+
+
+
+
+
+
+
