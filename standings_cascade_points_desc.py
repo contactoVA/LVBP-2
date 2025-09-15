@@ -68,8 +68,8 @@ DAY_WINDOW_MODE = conf["DAY_WINDOW_MODE"]  # "calendar" o "sports"
 API = "https://mlb25.theshow.com/apis/game_history.json"
 PLATFORM = "psn"
 MODE = "LEAGUE"
-SINCE = datetime(2025, 9, 11)
-PAGES = (1, 2)   # <-- SOLO p1 y p2, como validaste
+SINCE = datetime(2025, 9, 15)
+PAGES = (1, 2, 3, 4, 5, 6, 7)   # <-- SOLO p1 y p2, como validaste
 TIMEOUT = 20
 RETRIES = 2
 
@@ -111,20 +111,20 @@ FETCH_ALIASES = {
 
 # ===== Ajustes algebraicos por equipo (resets W/L) =====
 TEAM_RECORD_ADJUSTMENTS = {
-"Red Sox": (5, 5),
-"Yankees": (7, 1),
-"Blue Jays": (5, 3),
-"Tigers": (3, 4),
-"Royals": (6, 1),
-"Astros": (5, 4),
-"Mets": (2, 4),
-"Phillies": (1, 6),
-"Cubs": (2, 7),
-"Cardinals": (3, 3),
-"Diamondbacks": (0, 6),
-"Dodgers": (6, 0),
-"Padres": (1, 5),
-"Giants": (5, 2),
+"Red Sox": (6, 6),
+"Yankees": (10, 2),
+"Blue Jays": (9, 3),
+"Tigers": (6, 6),
+"Royals": (10, 2),
+"Astros": (6, 6),
+"Mets": (5, 7),
+"Phillies": (1, 11),
+"Cubs": (2, 10),
+"Cardinals": (7, 5),
+"Diamondbacks": (2, 10),
+"Dodgers": (10, 2),
+"Padres": (3, 9),
+"Giants": (7, 5),
 }
 
 # ===== Ajustes manuales de PUNTOS (desconexiones, sanciones, bonificaciones) =====
@@ -487,6 +487,7 @@ def games_played_today_scl():
 
 
 # ====== FIN DEL BLOQUE ======
+
 
 
 
