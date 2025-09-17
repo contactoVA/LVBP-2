@@ -1,4 +1,4 @@
-# standings_cascade_points.py
+2# standings_cascade_points.py
 # Tabla de posiciones (2 páginas por jugador) con columnas:
 # Pos | Equipo | Jugador | Prog(13) | JJ | W | L | Por jugar | Pts
 # Reglas: LEAGUE + fecha, filtro (ambos miembros) o (CPU + miembro), dedup por id, ajustes algebraicos.
@@ -111,20 +111,20 @@ FETCH_ALIASES = {
 
 # ===== Ajustes algebraicos por equipo (resets W/L) =====
 TEAM_RECORD_ADJUSTMENTS = {
-"Red Sox": (6, 6),
+"Red Sox": (7, 6),
 "Yankees": (10, 2),
 "Blue Jays": (9, 3),
 "Tigers": (6, 6),
-"Royals": (10, 2),
+"Royals": (10, 1),
 "Astros": (6, 6),
 "Mets": (5, 7),
 "Phillies": (1, 11),
 "Cubs": (2, 10),
-"Cardinals": (7, 5),
+"Cardinals": (7, 6),
 "Diamondbacks": (2, 10),
 "Dodgers": (10, 2),
 "Padres": (3, 9),
-"Giants": (7, 5),
+"Giants": (6, 5),
 }
 
 # ===== Ajustes manuales de PUNTOS (desconexiones, sanciones, bonificaciones) =====
