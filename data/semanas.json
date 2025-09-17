@@ -283,8 +283,8 @@
       {
         "local": "Yankees",
         "visitante": "Cardinals",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "7-1",
+        "estado": "JUGADO"
       },
       {
         "local": "Yankees",
@@ -403,14 +403,14 @@
       {
         "local": "Cardinals",
         "visitante": "Red Sox",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "4-13",
+        "estado": "JUGADO"
       },
       {
         "local": "Cardinals",
         "visitante": "Red Sox",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "0-2",
+        "estado": "JUGADO"
       },
       {
         "local": "Cardinals",
