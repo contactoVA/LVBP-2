@@ -1,4 +1,4 @@
-{
+Y o{
   "semana_actual": 3,
   "semanas": {
     "2": [
@@ -403,8 +403,8 @@
       {
         "local": "Cardinals",
         "visitante": "Red Sox",
-        "resultado": "0-2",
-        "estado": "JUGADO"
+        "resultado": "",
+        "estado": "Pendiente"
       },
       {
         "local": "Cardinals",
