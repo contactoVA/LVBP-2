@@ -487,8 +487,8 @@
       {
         "local": "Royals",
         "visitante": "Cubs",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "1-6",
+        "estado": "JUGADO"
       },
       {
         "local": "Tigers",
