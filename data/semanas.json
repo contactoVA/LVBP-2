@@ -367,20 +367,20 @@
       {
         "local": "Cubs",
         "visitante": "Tigers",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "6-1",
+        "estado": "JUGADO"
       },
       {
         "local": "Cubs",
         "visitante": "Tigers",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "8-3",
+        "estado": "JUGADO"
       },
       {
         "local": "Cubs",
         "visitante": "Tigers",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "9-4",
+        "estado": "JUGADO"
       },
       {
         "local": "Dodgers",
@@ -487,8 +487,8 @@
       {
         "local": "Royals",
         "visitante": "Cubs",
-        "resultado": "1-6",
-        "estado": "JUGADO"
+        "resultado": "",
+        "estado": "Pendiente"
       },
       {
         "local": "Tigers",
