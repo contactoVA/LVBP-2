@@ -355,8 +355,8 @@
       {
         "local": "Blue Jays",
         "visitante": "Royals",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "13-3",
+        "estado": ""JUGADO"
       },
       {
         "local": "Blue Jays",
@@ -457,20 +457,20 @@
       {
         "local": "Phillies",
         "visitante": "Blue Jays",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "1-8",
+        "estado": "JUGADO"
       },
       {
         "local": "Phillies",
         "visitante": "Blue Jays",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "2-11",
+        "estado": "JUGADO"
       },
       {
         "local": "Phillies",
         "visitante": "Blue Jays",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "4-9",
+        "estado": "JUGADO"
       },
       {
         "local": "Royals",
