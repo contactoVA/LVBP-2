@@ -289,8 +289,8 @@
       {
         "local": "Yankees",
         "visitante": "Cardinals",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "5-4",
+        "estado": "JUGADO"
       },
       {
         "local": "Giants",
@@ -415,8 +415,8 @@
       {
         "local": "Cardinals",
         "visitante": "Red Sox",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "2-4",
+        "estado": "JUGADO"
       },
       {
         "local": "Astros",
