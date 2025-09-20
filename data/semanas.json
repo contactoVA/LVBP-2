@@ -302,7 +302,7 @@
         "local": "Giants",
         "visitante": "Astros",
         "resultado": "2-5",
-        "estado": ""JUGADO"
+        "estado": "JUGADO"
       },
       {
         "local": "Giants",
@@ -362,7 +362,7 @@
         "local": "Blue Jays",
         "visitante": "Royals",
         "resultado": "4-3",
-        "estado": "Jugado"
+        "estado": "JUGADO"
       },
       {
         "local": "Cubs",
