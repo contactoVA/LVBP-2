@@ -385,8 +385,8 @@
       {
         "local": "Dodgers",
         "visitante": "Yankees",
-        "resultado": "1-10",
-        "estado": "JUGADO"
+        "resultado": "",
+        "estado": "Pendiente"
       },
       {
         "local": "Dodgers",
