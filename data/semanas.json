@@ -259,20 +259,20 @@
       {
         "local": "Red Sox",
         "visitante": "Dodgers",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "0-11",
+        "estado": "JUGADO"
       },
       {
         "local": "Red Sox",
         "visitante": "Dodgers",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "6-9",
+        "estado": "JUGADO"
       },
       {
         "local": "Red Sox",
         "visitante": "Dodgers",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "2-3",
+        "estado": "JUGADO"
       },
       {
         "local": "Yankees",
@@ -385,14 +385,14 @@
       {
         "local": "Dodgers",
         "visitante": "Yankees",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "1-10",
+        "estado": "JUGADO"
       },
       {
         "local": "Dodgers",
         "visitante": "Yankees",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "1-2",
+        "estado": "JUGADO"
       },
       {
         "local": "Dodgers",
@@ -493,20 +493,20 @@
       {
         "local": "Tigers",
         "visitante": "Padres",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "7-5",
+        "estado": "JUGADO"
       },
       {
         "local": "Tigers",
         "visitante": "Padres",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "9-6",
+        "estado": "JUGADO"
       },
       {
         "local": "Tigers",
         "visitante": "Padres",
-        "resultado": "",
-        "estado": "Pendiente"
+        "resultado": "15-3",
+        "estado": "JUGADO"
       }
     ]
   }
