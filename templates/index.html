@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>LVBP2 online - Tabla & Juegos</title>
-  <!-- Sirve el CSS desde /static; asegúrate de tener static/styles.css con contenido -->
   <link rel="stylesheet" href="/static/styles.css" />
   <style>
-    /* Fallback visual mínimo por si el CSS no carga */
+    /* Fallback visual mínimo */
     body{font-family:system-ui,Arial,sans-serif;background:#0b1220;color:#e8eefc;margin:0}
     .container{max-width:1000px;margin:0 auto;padding:24px}
     .hidden{display:none}
@@ -89,7 +88,6 @@
     const show = x => x.classList.remove('hidden');
     const hide = x => x.classList.add('hidden');
 
-    
     function renderWeekly(data){
       const weekly = data.semanas;
       const current = data.semana_actual;
@@ -111,7 +109,6 @@
       teams.forEach(t => filter.appendChild(mkOpt(t, t)));
 
       const createWeekBlock = (weekNum, juegos) => {
-        // Group by series key "local vs visitante"
         const groups = {};
         juegos.forEach((j, idx) => {
           const key = j.local + ' vs ' + j.visitante;
@@ -159,10 +156,8 @@
           lines.forEach(x => x.style.display = '');
           return;
         }
-        // Hide everything, show only series/items containing team
         lines.forEach(x => x.style.display = 'none');
         cont.querySelectorAll('details').forEach(det => {
-          // For each series title + its lis, decide visibility
           const blocks = det.querySelectorAll('.titulo-serie');
           blocks.forEach(title => {
             const serieText = title.textContent || '';
@@ -191,7 +186,6 @@
     }
 
     function parseGameString(s){
-      // Convierte "Mets 3 - Mariners 0 - 07-09-2025 - 6:30 pm (hora Chile)"
       const norm = (s||'').replace(/\s+/g,' ').trim();
       const parts = norm.split(' - ');
       if (parts.length >= 4) {
@@ -226,13 +220,11 @@
         }
         const data = await r.json();
 
-        // Última actualización (si tu app la añade)
         if (data.last_updated) {
           el.updated.textContent = `Última actualización: ${data.last_updated}`;
           show(el.updated);
         }
 
-        // Standings
         el.standingsBody.innerHTML = '';
         (data.standings || []).forEach((row, i) => {
           const tr = document.createElement('tr');
@@ -251,7 +243,6 @@
         });
         show(el.standingsSection);
 
-        // Juegos de hoy (acepta strings u objetos)
         el.gamesList.innerHTML = '';
         const games = data.games_today || [];
         if (games.length === 0) {
@@ -274,12 +265,9 @@
         }
         show(el.gamesSection);
 
-        // Render weekly block if present
         if (data.semanas && data.semana_actual) {
           renderWeekly(data);
         }
-
-
       }catch(e){
         el.error.textContent = 'No se pudieron cargar los datos: ' + e.message;
         show(el.error);
@@ -292,6 +280,3 @@
   </script>
 </body>
 </html>
-
-
-
