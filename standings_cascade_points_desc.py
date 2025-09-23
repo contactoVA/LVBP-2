@@ -123,7 +123,7 @@ TEAM_RECORD_ADJUSTMENTS = {
 "Cardinals": (7, 5),
 "Diamondbacks": (3, 15),
 "Dodgers": (10, 2),
-"Padres": (5, 9),
+"Padres": (3, 12),
 "Giants": (9, 5),
 }
 
@@ -487,6 +487,7 @@ def games_played_today_scl():
 
 
 # ====== FIN DEL BLOQUE ======
+
 
 
 
