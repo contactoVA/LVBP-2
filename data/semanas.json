@@ -2,7 +2,7 @@
   "semana_actual": 4,
   "semanas": {
     "4": [
-      { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "" PENDIENTE" },
+      { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "PENDIENTE" },
       { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "PENDIENTE" },
       { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "PENDIENTE" },
 
