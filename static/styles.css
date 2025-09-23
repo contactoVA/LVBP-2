@@ -65,10 +65,9 @@ details summary {
   font-weight: bold;
   padding: 5px;
   list-style: none;
-  color: inherit; /* Mantiene el color original del texto */
+  color: inherit;
 }
 
-/* Solo triángulos en amarillo */
 details summary::-webkit-details-marker {
   color: yellow; /* Chrome/Safari */
 }
@@ -116,4 +115,33 @@ footer {
   text-align: center;
   color: #c5c6c7;
   font-size: 14px;
+}
+
+/* ==========================
+   Resaltar juegos según estado
+========================== */
+
+/* JUGADO → Amarillo */
+.juego-linea.estado-jugado {
+  font-weight: bold;
+  color: #FFD700;
+  background-color: #333;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+/* PENDIENTE → Gris tenue */
+.juego-linea.estado-pendiente {
+  color: #9fb3d1;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* SIMULADO → Naranja */
+.juego-linea.estado-simulado {
+  font-weight: bold;
+  color: #FFA500;
+  background-color: #222;
+  padding: 4px 6px;
+  border-radius: 4px;
 }
