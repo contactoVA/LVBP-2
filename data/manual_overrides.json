@@ -1,0 +1,62 @@
+{
+  "semana_actual": 4,
+  "semanas": {
+    "4": [
+      { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Diamondbacks", "visitante": "Tigers", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Astros", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Astros", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Astros", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Red Sox", "visitante": "Yankees", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Red Sox", "visitante": "Yankees", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Red Sox", "visitante": "Yankees", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Cubs", "visitante": "Phillies", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cubs", "visitante": "Phillies", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cubs", "visitante": "Phillies", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Dodgers", "visitante": "Royals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Dodgers", "visitante": "Royals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Dodgers", "visitante": "Royals", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Giants", "visitante": "Mets", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Giants", "visitante": "Mets", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Giants", "visitante": "Mets", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Cardinals", "visitante": "Blue Jays", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cardinals", "visitante": "Blue Jays", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cardinals", "visitante": "Blue Jays", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Diamondbacks", "visitante": "Astros", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Diamondbacks", "visitante": "Astros", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Diamondbacks", "visitante": "Astros", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Red Sox", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Red Sox", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Red Sox", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Cubs", "visitante": "Cardinals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cubs", "visitante": "Cardinals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cubs", "visitante": "Cardinals", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Tigers", "visitante": "Giants", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Tigers", "visitante": "Giants", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Tigers", "visitante": "Giants", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Dodgers", "visitante": "Mets", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Dodgers", "visitante": "Mets", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Dodgers", "visitante": "Mets", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Phillies", "visitante": "Royals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Phillies", "visitante": "Royals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Phillies", "visitante": "Royals", "resultado": "", "estado": "PENDIENTE" },
+
+      { "local": "Blue Jays", "visitante": "Yankees", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Blue Jays", "visitante": "Yankees", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Blue Jays", "visitante": "Yankees", "resultado": "", "estado": "PENDIENTE" }
+    ]
+  }
+}
