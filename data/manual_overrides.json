@@ -38,7 +38,7 @@
       { "local": "Red Sox", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
       { "local": "Red Sox", "visitante": "Padres", "resultado": "", "estado": "PENDIENTE" },
 
-      { "local": "Cubs", "visitante": "Cardinals", "resultado": "", "estado": "PENDIENTE" },
+      { "local": "Cubs", "visitante": "Cardinals", "resultado": "3-5", "estado": "JUGADO" },
       { "local": "Cubs", "visitante": "Cardinals", "resultado": "", "estado": "PENDIENTE" },
       { "local": "Cubs", "visitante": "Cardinals", "resultado": "", "estado": "PENDIENTE" },
 
@@ -60,3 +60,4 @@
     ]
   }
 }
+
