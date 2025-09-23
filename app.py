@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, render_template, jsonify
 import json
 import os
@@ -11,6 +10,10 @@ CACHE_FILE = "standings_cache.json"
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+def save_json(path, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 @app.route("/")
 def index():
@@ -98,24 +101,27 @@ def api_full():
                                     used_games.append(g)
                                     break
 
-                # === SOLO DESPUÉS aplicar overrides ===
-                # ###MARCA_OVERRIDES###
+                # === Aplicar overrides en TODAS las semanas ===
                 try:
                     overrides_path = os.path.join(data_dir, "manual_overrides.json")
                     if os.path.exists(overrides_path):
                         overrides = load_json(overrides_path)
                         for key, val in overrides.items():
-                            for juego in semanas["semanas"].get(semana_actual, []):
-                                if (
-                                    juego.get("local") == val.get("local")
-                                    and juego.get("visitante") == val.get("visitante")
-                                ):
-                                    if "resultado" in val:
-                                        juego["resultado"] = val["resultado"]
-                                    if "estado" in val:
-                                        juego["estado"] = val["estado"]
+                            for wk, juegos in semanas.get("semanas", {}).items():
+                                for juego in juegos:
+                                    if (
+                                        juego.get("local") == val.get("local")
+                                        and juego.get("visitante") == val.get("visitante")
+                                    ):
+                                        if "resultado" in val:
+                                            juego["resultado"] = val["resultado"]
+                                        if "estado" in val:
+                                            juego["estado"] = val["estado"]
                 except Exception as e:
                     data["overrides_error"] = str(e)
+
+                # === Guardar cambios en semanas.json ===
+                save_json(semanas_path, semanas)
 
                 # Agregar semanas al payload
                 data["semana_actual"] = semanas.get("semana_actual")
