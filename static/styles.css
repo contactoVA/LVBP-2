@@ -120,8 +120,6 @@ footer {
 /* ==========================
    Resaltar juegos según estado
 ========================== */
-
-/* JUGADO → Amarillo */
 .juego-linea.estado-jugado {
   font-weight: bold;
   color: #FFD700;
@@ -130,18 +128,71 @@ footer {
   border-radius: 4px;
 }
 
-/* PENDIENTE → Gris tenue */
 .juego-linea.estado-pendiente {
   color: #9fb3d1;
   font-style: italic;
   opacity: 0.8;
 }
 
-/* SIMULADO → Naranja */
 .juego-linea.estado-simulado {
   font-weight: bold;
   color: #FFA500;
   background-color: #222;
   padding: 4px 6px;
   border-radius: 4px;
+}
+
+/* ==========================
+   Nota de playoffs
+========================== */
+.nota-playoff {
+  font-size: 14px;
+  color: #32cd32; /* verde lima */
+  font-weight: bold;
+  margin: 6px 0 12px 0;
+}
+
+/* ==========================
+   Filas de playoffs
+========================== */
+tr.playoff {
+  font-weight: bold;
+  border-left: 6px solid #32cd32; /* verde lime */
+  background-color: rgba(50, 205, 50, 0.08);
+}
+
+/* ==========================
+   Línea divisoria simple
+========================== */
+#standings-body tr:nth-child(9) {
+  border-top: 3px solid #FFD700; /* dorado */
+}
+
+/* ==========================
+   Hover dinámico
+========================== */
+#standings-body tr {
+  transition: all 0.2s ease;
+}
+#standings-body tr:hover {
+  background-color: rgba(102, 252, 241, 0.12);
+  transform: scale(1.01);
+}
+
+/* ==========================
+   Colores para columna GB
+========================== */
+.gb-green {
+  color: #32cd32; /* verde */
+  font-weight: bold;
+}
+
+.gb-yellow {
+  color: #FFD700; /* amarillo dorado */
+  font-weight: bold;
+}
+
+.gb-red {
+  color: #FF4500; /* rojo anaranjado */
+  font-weight: bold;
 }
