@@ -35,7 +35,8 @@
     <div id="last-updated" class="muted hidden"></div>
 
     <section id="standings-section" class="hidden">
-      <h2>🏆 Tabla de posiciones</h2>
+      <h2 title="Clasifican a postemporada los 8 primeros equipos">🏆 Tabla de posiciones</h2>
+      <p class="nota-playoff">Los <strong>8 primeros</strong> clasifican a <strong>postemporada</strong> ✅</p>
       <div class="table-wrapper">
         <table>
           <thead>
@@ -48,7 +49,7 @@
               <th class="num">W</th>
               <th class="num">L</th>
               <th class="num">Por jugar</th>
-              <th class="num">Pts</th>
+              <th class="num" title="Juegos de diferencia respecto al líder">GB</th>
             </tr>
           </thead>
           <tbody id="standings-body"></tbody>
@@ -98,7 +99,6 @@
 
       if (!weekly || !current) return;
 
-      // Build unique team list for filter
       const teamsSet = new Set();
       Object.values(weekly).forEach(arr => {
         arr.forEach(j => { teamsSet.add(j.local); teamsSet.add(j.visitante); });
@@ -226,18 +226,48 @@
         }
 
         el.standingsBody.innerHTML = '';
-        (data.standings || []).forEach((row, i) => {
+
+        let standings = data.standings || [];
+
+        // Calcular GB para todos
+        if (standings.length > 0) {
+          const leader = standings[0];
+          standings = standings.map((row, i) => {
+            let gb = 0;
+            if (i === 0) {
+              gb = 0; // líder
+            } else {
+              gb = ((leader.wins - row.wins) + (row.losses - leader.losses)) / 2;
+            }
+            row.gb = gb;
+            return row;
+          });
+
+          // Ordenar por GB ascendente
+          standings.sort((a, b) => a.gb - b.gb);
+        }
+
+        // Render
+        standings.forEach((row, i) => {
           const tr = document.createElement('tr');
+          const isPlayoff = i < 8;
+          if (isPlayoff) tr.classList.add('playoff');
+
+          let gbText = (row.gb === 0) ? "-" : row.gb.toFixed(1).replace(".0", "");
+          let gbClass = "gb-green";
+          if (row.gb > 2 && row.gb <= 5) gbClass = "gb-yellow";
+          if (row.gb > 5) gbClass = "gb-red";
+
           tr.innerHTML = `
             <td>${i+1}</td>
-            <td>${row.team}</td>
+            <td>${row.team} ${isPlayoff ? '✅' : ''}</td>
             <td><span class="tag">${row.user}</span></td>
             <td class="num">${row.scheduled}</td>
             <td class="num">${row.played}</td>
             <td class="num">${row.wins}</td>
             <td class="num">${row.losses}</td>
             <td class="num">${row.remaining}</td>
-            <td class="num">${row.points}</td>
+            <td class="num ${gbClass}">${gbText}</td>
           `;
           el.standingsBody.appendChild(tr);
         });
