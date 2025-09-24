@@ -11,7 +11,7 @@
       { "local": "Astros", "visitante": "Padres", "resultado": "", "estado": "Pendiente" },
 
       { "local": "Red Sox", "visitante": "Yankees", "resultado": "6-4", "estado": "Jugado" },
-      { "local": "Red Sox", "visitante": "Yankees", "resultado": "", "estado": "Pendiente" },
+      { "local": "Red Sox", "visitante": "Yankees", "resultado": "0-8", "estado": "Jugado" },
       { "local": "Red Sox", "visitante": "Yankees", "resultado": "", "estado": "Pendiente" },
 
       { "local": "Cubs", "visitante": "Phillies", "resultado": "12-0", "estado": "Jugado" },
@@ -60,4 +60,5 @@
     ]
   }
 }
+
 
